@@ -1,0 +1,18 @@
+
+<div class="page-title">Add New Product</div>
+<br>
+<br>
+<br>
+<div class="col-lg-4"></div>
+<div class="col-lg-4">
+  <%= form_for @product do |f| %>
+              
+              <%= f.text_field :product_name, :required => true, label: "Product Name" %>
+              <%= f.submit %>
+              <%= link_to 'Cancel', products_path, class: 'btn btn-danger btn-xs' %>
+  <% end %>
+</div>
+
+
+
+
