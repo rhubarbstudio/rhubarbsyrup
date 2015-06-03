@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
 
 	def create
 		@product =Product.new(product_params)
+		@product.product_name = @product.product_name.downcase
 		if @product.save
 		 	redirect_to products_path
 	 	else

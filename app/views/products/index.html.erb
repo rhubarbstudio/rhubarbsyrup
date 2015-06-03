@@ -6,8 +6,15 @@
 			<div class="col-md-4">
 			
 				<div class="page-title">Products</div>
-					<%=  @products.each do |product|%>
-					<div class="items"><%= link_to product.product_name, product_path(product.id), class: "btn btn-success btn-lg btn-width"  %></div>
+				<div class="items"><a class="btn btn-lg  btn-width btn-color" href="/products/new">
+				create product</a></div>
+
+					<%=  @products.each do |product| %>
+					<div class="items"><%= link_to product.product_name, product_path(product.id), class: "btn btn-success btn-lg btn-width" %>
+					</div>
+				
+					
+					
 				<% end %>
 
 			</div>

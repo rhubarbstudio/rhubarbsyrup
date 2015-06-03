@@ -4,7 +4,7 @@
 
 .page-title {
 	text-align: center;
-	font-size: 30pt;
+	font-size: 20pt;
 	font-weight: bold;
 }
 
@@ -16,4 +16,24 @@
 
 .btn-width{
 	width: 300px;
+}
+
+.btn-color{
+	background-color: #999999;
+	color: white;
+}
+
+/*.btn-color moved to aplication.scss so that it loads after bootstrap */
+
+.btn-width-2{
+	width: 400px;
+}
+
+.btn-display{
+	display: inline-block;
+}
+
+.center-form{
+	/*text-align: center;*/
+	text-align: center;
 }
