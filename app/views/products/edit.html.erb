@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row"></div>
-	<div class="page-title">Add New Product</div>
+	<div class="page-title">Edit Product Name</div>
 
 		<br>
 		<br>
@@ -14,11 +14,10 @@
 		  	
 		  		<%= form_for @product do |f| %>
 		              <%= f.text_field :product_name, maxlength: "30", :required => true %>
-		              <%= f.submit "Create" %>
+		              <%= f.submit "Update" %>
 		              <%= link_to 'Cancel', products_path, class: 'btn btn-danger btn-xs' %>
 		  		<% end %>
 		
 		</div>
 		
 	</div>
-	

@@ -9,7 +9,7 @@
 				<div class="items"><a class="btn btn-lg  btn-width btn-color" href="/products/new">
 				create product</a></div>
 
-					<%=  @products.each do |product| %>
+					<%  @products.each do |product| %>
 					<div class="items"><%= link_to product.product_name, product_path(product.id), class: "btn btn-success btn-lg btn-width" %>
 					</div>
 				

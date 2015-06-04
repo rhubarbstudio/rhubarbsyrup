@@ -2,8 +2,12 @@
 <div class="row"></div>
 	<div class="col-med-4">
 		<div class="col-med-4">
-			<div class="page-title">Product: <%= @product.product_name %></div>
-			<%= link_to "Edit #{@product.product_name}", edit_product_path, class: "btn btn-lg btn-default button-color"%>
+			<div class="page-title">Product: <%= @product.product_name %>
+			<br>
+		
+			<%= link_to "Edit Product Name", edit_product_path, class: "btn btn-sm btn-default button-color", id: "edit-prod-button"%>
+			</div>
+			
 			
 		</div>
 	</div>
