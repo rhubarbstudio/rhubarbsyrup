@@ -36,10 +36,23 @@ class ProductsController < ApplicationController
 		if @product.update_attributes(product_params)
 			# return to the sellers item index page after update to user info
 			# redirect_to request.referer
-			redirect_to products_path
+			redirect_to product_path
 		else
 			render "edit"
 		end
+	end
+
+	def destroy
+		@product = Product.find(params[:id])
+		# find all existing items user created and delete them as part of
+		#    deleting the user
+		if @product.destroy
+		# display the user buyerindex page after the user is deleted
+			redirect_to products_path
+		else
+			render "index"
+		end
+
 	end
 
 private
