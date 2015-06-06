@@ -25,9 +25,11 @@
 .navbar-text{
 	color: black;
 }
-:hover#navbar-text{
+
+:hover.navbar-default{
 	color: white;
 }
+
 .navbar-brand {
 	color: white;
 }
