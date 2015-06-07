@@ -3,10 +3,7 @@
 	<div class="col-med-4">
 		<div class="col-med-4">
 			<div class="page-title">Product: <%= @product.product_name %>
-			<br>
-
-			<%= link_to "Edit Product Name", edit_product_path, class: "btn btn-sm btn-default button-color"%>
-			<%= link_to "Delete Product Name", delete_product_path, method: :delete, data: { confirm: 'Are you sure you want to delete product: '+@product.product_name.upcase+  '?  ALL HISTORY WILL ALSO BE PERMANENTLY DELETED!' }, class: "btn btn-sm btn-default button-color" %>
+			
 			
 			</div>
 			

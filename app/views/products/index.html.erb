@@ -4,18 +4,18 @@
 	<div class="row"></div>
 		<div class="col-md-4"></div>
 			<div class="col-md-4">
-			
-				<div class="page-title">Products</div>
+
+				<div class="page-title">products</div>
 				<div class="items btn btn-color btn-width btn-center">
 					<button class="flip-add-product btn-color btn-cneter">add new product</button>
-				</div>
+				
 				<div class="panel-add-product">
 					<%= form_for  Product.new  do  |f| %>
 			              <%= f.text_field :product_name, maxlength: "30", :required => true %>
-			              <%= f.submit "Create" %>
-			              <%= link_to 'Cancel', products_path, class: 'btn btn-danger btn-xs' %>
+			              <%= f.submit "create", class: "btn-color" %>
+			              <%= link_to 'cancel', products_path, class: 'btn btn-danger btn-xs' %>
 			  		<% end %>
-		  		</div>
+		  		</div></div>
 
 
 				<!-- <a class="btn btn-lg  btn-width btn-color" href="/products/new">
@@ -24,7 +24,7 @@
 					<%  @products.each do |product| %>
 
 					<div class="btn btn-color btn-width btn-spacing">
-						<%= link_to   product.product_name, product_path(product.id), class: "btn btn-color btn-width-show" %><button class="flip btn-float-right btn-color">edit</button><%= link_to "Delete", delete_product_path(product.id), method: :delete, data: { confirm: 'Are you sure you want to delete product: '+product.product_name.upcase+  '?  ALL HISTORY WILL ALSO BE PERMANENTLY DELETED!' }, class: "btn btn-sm btn-default button-color" %></button></button>
+						<%= link_to   product.product_name, product_path(product.id), class: "btn btn-color btn-width-show" %><button class="flip btn-float-right btn-color">edit</button><%= link_to "delete", delete_product_path(product.id), method: :delete, data: { confirm: 'Are you sure you want to delete product: '+product.product_name.upcase+  '?  ALL HISTORY WILL ALSO BE PERMANENTLY DELETED!' }, class: "btn btn-sm btn-default button-color" %></button></button>
 						<div class="panel1">
 							<%= form_for product do |f| %>
 					              <%= f.text_field :product_name, maxlength: "30", :required => true %>
