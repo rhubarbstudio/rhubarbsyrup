@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 	
 	def index
-		@products = Product.all
+		@products = Product.all.order(created_at: :desc)
 	end
 
 	def show
@@ -36,7 +36,7 @@ class ProductsController < ApplicationController
 		if @product.update_attributes(product_params)
 			# return to the sellers item index page after update to user info
 			# redirect_to request.referer
-			redirect_to product_path
+			redirect_to products_path
 		else
 			render "edit"
 		end

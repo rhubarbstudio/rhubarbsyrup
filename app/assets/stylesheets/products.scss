@@ -1,6 +1,33 @@
 /*// Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
+.panel1, .flip{
+    padding: 5px;
+    text-align: center;
+    background-color: gray;
+    color: black;
+    border: solid 1px #c3c3c3;
+}
+
+.panel1, .panel-add-product {
+    padding: 5px;
+    text-align: center;
+    background-color: gray;
+    color: black;
+    border: solid 1px #c3c3c3;
+}
+
+
+
+.panel1 {
+    
+    display: none;
+}
+
+.panel-add-product {
+	display: none;
+}
+
 #edit-prod-button {
 	display: block;
 	color: white;
@@ -47,12 +74,30 @@
 }
 
 .btn-width{
-	width: 300px;
+	width: 400px;
+}
+
+.btn-width-show {
+	width: 280px;
+}
+
+.btn-spacing{
+	margin-top: 5px;
 }
 
 .btn-color{
 	background-color: #999999;
 	color: white;
+}
+
+.btn-float-right{
+	float: right;
+}
+
+.btn-center {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*.btn-color moved to aplication.scss so that it loads after bootstrap */

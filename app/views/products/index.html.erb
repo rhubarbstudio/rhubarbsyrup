@@ -6,19 +6,61 @@
 			<div class="col-md-4">
 			
 				<div class="page-title">Products</div>
-				<div class="items"><a class="btn btn-lg  btn-width btn-color" href="/products/new">
-				create product</a></div>
+				<div class="items btn btn-color btn-width btn-center">
+					<button class="flip-add-product btn-color btn-cneter">add new product</button>
+				</div>
+				<div class="panel-add-product">
+					<%= form_for  Product.new  do  |f| %>
+			              <%= f.text_field :product_name, maxlength: "30", :required => true %>
+			              <%= f.submit "Create" %>
+			              <%= link_to 'Cancel', products_path, class: 'btn btn-danger btn-xs' %>
+			  		<% end %>
+		  		</div>
+
+
+				<!-- <a class="btn btn-lg  btn-width btn-color" href="/products/new">
+				create product</a></div> -->
 
 					<%  @products.each do |product| %>
-					<div class="items"><%= link_to product.product_name, product_path(product.id), class: "btn btn-success btn-lg btn-width" %>
+
+					<div class="btn btn-color btn-width btn-spacing">
+						<%= link_to   product.product_name, product_path(product.id), class: "btn btn-color btn-width-show" %><button class="flip btn-float-right btn-color">edit</button><%= link_to "Delete", delete_product_path(product.id), method: :delete, data: { confirm: 'Are you sure you want to delete product: '+product.product_name.upcase+  '?  ALL HISTORY WILL ALSO BE PERMANENTLY DELETED!' }, class: "btn btn-sm btn-default button-color" %></button></button>
+						<div class="panel1">
+							<%= form_for product do |f| %>
+					              <%= f.text_field :product_name, maxlength: "30", :required => true %>
+					              <%= f.submit "Update" %>
+					              
+			  				<% end %>
+		  				</div>
+		  		
+						<!-- <div class="panel1">
+							<%= link_to "edit", product_path(product.id), class: "btn btn-lg btn-width btn-color" %>
+						</div> -->
+						
 					</div>
-				
-					
+		
 					
 				<% end %>
-
+				
 			</div>
 			<div class="col-md-4"></div>
+			
 	
 	</div>
 </div>
+
+<script>
+$(document).ready(function(){
+    $(".flip").click(function(){
+        $(".panel1").slideDown("slow");
+});
+
+    });
+
+$(document).ready(function(){
+    $(".flip-add-product").click(function(){
+        $(".panel-add-product").slideDown("slow");
+});
+
+    });
+</script>
