@@ -1,7 +1,7 @@
 class IngredientsController < ApplicationController
 
 	def index
-
+		@ingredients = Product.joins(productingredients)
 	end
 
 	def show

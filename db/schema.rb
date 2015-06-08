@@ -26,18 +26,22 @@ ActiveRecord::Schema.define(version: 20150605232636) do
     t.datetime "updated_at"
   end
 
-  create_table "instances", force: true do |t|
-    t.date     "instance_date"
-    t.text     "note"
-    t.text     "image"
-    t.integer  "ingredient_product_id"
+  create_table "ingredients_products", force: true do |t|
+    t.integer  "product_id"
+    t.integer  "ingredient_id"
+    t.integer  "instance_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "product_ingredients", force: true do |t|
-    t.integer  "product_id"
-    t.integer  "ingredients_id"
+  add_index "ingredients_products", ["ingredient_id"], name: "index_ingredients_products_on_ingredient_id", using: :btree
+  add_index "ingredients_products", ["instance_id"], name: "index_ingredients_products_on_instance_id", using: :btree
+  add_index "ingredients_products", ["product_id"], name: "index_ingredients_products_on_product_id", using: :btree
+
+  create_table "instances", force: true do |t|
+    t.datetime "instance_date"
+    t.text     "note"
+    t.text     "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

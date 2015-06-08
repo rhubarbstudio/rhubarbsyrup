@@ -2,10 +2,14 @@ class ProductsController < ApplicationController
 	
 	def index
 		@products = Product.all.order(created_at: :desc)
+		
+		# Product.joins(:ingredients)
+		# Ingredient.joins('OUTER JOIN products_ingredients ON products_ingredients.ingredient_id = ingredient_id')
 	end
 
 	def show
 		@product = Product.find(params[:id])
+		@ingredients = Ingredient.joins(:products)
 	end
 
 
@@ -15,6 +19,8 @@ class ProductsController < ApplicationController
 
 	def create
 		@product =Product.new(product_params)
+		@product.ingredients = Ingredient.all
+
 		@product.product_name = @product.product_name.downcase
 		if @product.save
 		 	redirect_to products_path

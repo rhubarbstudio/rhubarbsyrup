@@ -24,7 +24,12 @@
 					<%  @products.each do |product| %>
 
 					<div class="btn btn-color btn-width btn-spacing">
-						<%= link_to   product.product_name, product_path(product.id), class: "btn btn-color btn-width-show" %><button class="flip btn-float-right btn-color">edit</button><%= link_to "delete", delete_product_path(product.id), method: :delete, data: { confirm: 'Are you sure you want to delete product: '+product.product_name.upcase+  '?  ALL HISTORY WILL ALSO BE PERMANENTLY DELETED!' }, class: "btn btn-sm btn-default button-color" %></button></button>
+						<%= link_to   product.product_name, product_path(product.id), class: "btn btn-color btn-width-show" %>
+						
+						<button class="flip btn-float-right btn-color">edit</button>
+						<%= link_to "delete", delete_product_path(product.id), method: :delete, data: { confirm: 'Are you sure you want to delete product: '+product.product_name.upcase+  '?  ALL HISTORY WILL ALSO BE PERMANENTLY DELETED!' }, class: "btn btn-sm btn-default button-color" %></button>
+						
+						
 						<div class="panel1">
 							<%= form_for product do |f| %>
 					              <%= f.text_field :product_name, maxlength: "30", :required => true %>
@@ -51,8 +56,10 @@
 
 <script>
 $(document).ready(function(){
-    $(".flip").click(function(){
-        $(".panel1").slideDown("slow");
+    $(".flip").click(function(even){
+    	var button = $(event.currentTarget);
+    	button.siblings('.panel1').slideDown('slow');
+        // $(".panel1").slideDown("slow");
 });
 
     });

@@ -28,6 +28,12 @@
 	display: none;
 }
 
+
+.ingredient-name {
+	/*float: left;*/
+	font-size: 20px;
+}
+
 #edit-prod-button {
 	display: block;
 	color: white;
@@ -66,6 +72,7 @@
 	font-size: 20pt;
 	font-weight: bold;
 	margin-top: 40px;
+	margin-bottom: 30px;
 }
 
 .items {
