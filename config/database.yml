@@ -86,7 +86,7 @@ production:
 
 
  database: d70gi60hq756p6
-  username: tkqpeygwwrlzze
-  password: rPoBlTqFXdG16-fEzuRyhABTWb
+ username: tkqpeygwwrlzze
+ password: rPoBlTqFXdG16-fEzuRyhABTWb
   
   # <%= ENV['SYRUP_DATABASE_PASSWORD'] %> 
