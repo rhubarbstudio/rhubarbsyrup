@@ -79,7 +79,14 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: syrup_production
-  username: syrup
-  password: <%= ENV['SYRUP_DATABASE_PASSWORD'] %>
+  # <<: *default
+  # database: syrup_production
+  # username: syrup
+  # password: <%= ENV['SYRUP_DATABASE_PASSWORD'] %>
+
+
+ database: d70gi60hq756p6
+  username: tkqpeygwwrlzze
+  password: rPoBlTqFXdG16-fEzuRyhABTWb
+  
+  # <%= ENV['SYRUP_DATABASE_PASSWORD'] %> 
