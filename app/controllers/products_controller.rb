@@ -9,7 +9,9 @@ class ProductsController < ApplicationController
 
 	def show
 		@product = Product.find(params[:id])
-		@ingredients = Ingredient.joins(:products)
+		@ingredients = @product.ingredients
+
+		# Ingredient.joins(:products).where("product.id = ?", params[:products])
 	end
 
 
