@@ -3,10 +3,14 @@
 	<div class="row"></div>
 		<div class="col-sm-4"></div>
 			<div class="col-sm-4">
-				<div class="page-title">Product: <%= @product.product_name %></div>
+				<div class="page-title">product: <%= @product.product_name %></div>
+				<div class="page-subtitle">ingredients</div>
 					<% @ingredients.each do |ingredient| %>
 						<div class="ingredient-name">
-							<%= ingredient.name %>
+							<div class="btn btn-color btn-width btn-spacing">
+								<%= link_to ingredient.name, create_instance_path, method: :create, class: "btn btn-color btn-width-show" %>
+							</div>
+							
 						</div>
 					<% end %>
 			</div>	
