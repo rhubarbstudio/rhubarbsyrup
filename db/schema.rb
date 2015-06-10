@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150605232636) do
+ActiveRecord::Schema.define(version: 20150610193354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,13 +29,11 @@ ActiveRecord::Schema.define(version: 20150605232636) do
   create_table "ingredients_products", force: true do |t|
     t.integer  "product_id"
     t.integer  "ingredient_id"
-    t.integer  "instance_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "ingredients_products", ["ingredient_id"], name: "index_ingredients_products_on_ingredient_id", using: :btree
-  add_index "ingredients_products", ["instance_id"], name: "index_ingredients_products_on_instance_id", using: :btree
   add_index "ingredients_products", ["product_id"], name: "index_ingredients_products_on_product_id", using: :btree
 
   create_table "instances", force: true do |t|
@@ -44,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150605232636) do
     t.text     "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ingredients_products_id"
   end
 
   create_table "products", force: true do |t|
