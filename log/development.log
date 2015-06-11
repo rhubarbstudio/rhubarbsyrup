@@ -85800,3 +85800,2585 @@ Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 13:17:
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 13:17:16 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (21.3ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 297ms (Views: 270.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:08 -0700
+
+
+Started POST "/instances/40?ingredient_id1=2&product_id1=40" for 127.0.0.1 at 2015-06-10 17:25:12 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id1"=>"2", "product_id1"=>"40", "id"=>"40"}
+  [1m[35mIngredientProduct Load (0.3ms)[0m  SELECT "ingredients_products".* FROM "ingredients_products"  WHERE "ingredients_products"."product_id" = 40 AND "ingredients_products"."ingredient_id" = 2
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "instances" ("created_at", "instance_date", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-06-11 00:25:12.621690"], ["instance_date", "2015-06-11 00:25:12.606164"], ["updated_at", "2015-06-11 00:25:12.621690"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/products/40
+Completed 302 Found in 28ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 17:25:12 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (0.9ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (10.4ms)
+  Rendered shared/_navigation.html.erb (0.2ms)
+Completed 200 OK in 250ms (Views: 246.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:25:12 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:25:12 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:12 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:12 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:12 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:25:12 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:25:12 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:25:13 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (30.1ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 389ms (Views: 352.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:30 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[35mIngredientProduct Load (0.3ms)[0m  SELECT "ingredients_products".* FROM "ingredients_products"  WHERE "ingredients_products"."product_id" = 40 AND "ingredients_products"."ingredient_id" = 2
+  Rendered instances/create.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 265ms (Views: 240.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:31:33 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 17:37:47 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (16.1ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 262ms (Views: 232.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:37:47 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:37:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:47 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:47 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:48 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 17:37:51 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[36mIngredientProduct Load (0.5ms)[0m  [1mSELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id = '40' AND ingredient_id = '2')[0m
+  Rendered instances/create.html.erb within layouts/application (0.1ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 255ms (Views: 229.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:37:52 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 17:38:36 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (20.0ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 296ms (Views: 266.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:38:37 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 17:38:39 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+Completed 500 Internal Server Error in 14ms
+
+NameError (uninitialized constant InstancesController::IngredientsProduct):
+  app/controllers/instances_controller.rb:7:in `create'
+
+
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.3ms)
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (0.8ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (0.5ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (19.6ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 322ms (Views: 285.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:47:42 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 17:47:43 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[35mIngredientProduct Load (0.5ms)[0m  SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = '40' AND ingredient_id = '2')
+PG::UndefinedColumn: ERROR:  column "product_id1" does not exist
+LINE 1: ...s_products".* FROM "ingredients_products"  WHERE (product_id...
+                                                             ^
+: SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = '40' AND ingredient_id = '2')
+Completed 500 Internal Server Error in 47ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "product_id1" does not exist
+LINE 1: ...s_products".* FROM "ingredients_products"  WHERE (product_id...
+                                                             ^
+: SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = '40' AND ingredient_id = '2')):
+  app/controllers/instances_controller.rb:8:in `create'
+
+
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (21.6ms)
+  Rendered shared/_navigation.html.erb (0.2ms)
+Completed 200 OK in 358ms (Views: 331.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:34 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:35 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:35 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:35 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:35 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:35 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[36mIngredientProduct Load (0.4ms)[0m  [1mSELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id = 40 AND ingredient_id = 2)[0m
+  Rendered instances/create.html.erb within layouts/application (0.1ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 269ms (Views: 243.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:49:38 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 17:50:45 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (0.5ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (19.7ms)
+  Rendered shared/_navigation.html.erb (0.2ms)
+Completed 200 OK in 359ms (Views: 329.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:50:46 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 17:50:47 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[35mIngredientProduct Load (0.5ms)[0m  SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = 40 AND ingredient_id = 2)
+PG::UndefinedColumn: ERROR:  column "product_id1" does not exist
+LINE 1: ...s_products".* FROM "ingredients_products"  WHERE (product_id...
+                                                             ^
+: SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = 40 AND ingredient_id = 2)
+Completed 500 Internal Server Error in 24ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "product_id1" does not exist
+LINE 1: ...s_products".* FROM "ingredients_products"  WHERE (product_id...
+                                                             ^
+: SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = 40 AND ingredient_id = 2)):
+  app/controllers/instances_controller.rb:8:in `create'
+
+
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.0ms)
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 17:52:20 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[36mIngredientProduct Load (0.5ms)[0m  [1mSELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id = 40 AND ingredient_id = 2)[0m
+  Rendered instances/create.html.erb within layouts/application (0.2ms)
+  Rendered shared/_navigation.html.erb (0.6ms)
+Completed 200 OK in 299ms (Views: 273.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:21 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (19.3ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 335ms (Views: 308.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 17:52:46 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 17:52:47 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[35mIngredientProduct Load (0.6ms)[0m  SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = 40 AND ingredient_id = 2)
+PG::UndefinedColumn: ERROR:  column "product_id1" does not exist
+LINE 1: ...s_products".* FROM "ingredients_products"  WHERE (product_id...
+                                                             ^
+: SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = 40 AND ingredient_id = 2)
+Completed 500 Internal Server Error in 25ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "product_id1" does not exist
+LINE 1: ...s_products".* FROM "ingredients_products"  WHERE (product_id...
+                                                             ^
+: SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = 40 AND ingredient_id = 2)):
+  app/controllers/instances_controller.rb:8:in `create'
+
+
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.3ms)
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 17:55:21 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[36mIngredientProduct Load (0.5ms)[0m  [1mSELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = 40 AND ingredient_id = 2)[0m
+PG::UndefinedColumn: ERROR:  column "product_id1" does not exist
+LINE 1: ...s_products".* FROM "ingredients_products"  WHERE (product_id...
+                                                             ^
+: SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = 40 AND ingredient_id = 2)
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "product_id1" does not exist
+LINE 1: ...s_products".* FROM "ingredients_products"  WHERE (product_id...
+                                                             ^
+: SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id1 = 40 AND ingredient_id = 2)):
+  app/controllers/instances_controller.rb:8:in `create'
+
+
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (20.4ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 311ms (Views: 284.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:06 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[35mIngredientProduct Load (0.6ms)[0m  SELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id = '40' OR ingredient_id = '2')
+  Rendered instances/create.html.erb within layouts/application (0.2ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 398ms (Views: 369.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:08 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:09 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:09 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:09 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:09 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:09 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:09 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mIngredient Load (1.2ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (18.2ms)
+  Rendered shared/_navigation.html.erb (0.2ms)
+Completed 200 OK in 260ms (Views: 230.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:51 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 18:02:53 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[36mIngredientProduct Load (0.6ms)[0m  [1mSELECT "ingredients_products".* FROM "ingredients_products"  WHERE (product_id = 40 OR ingredient_id = 2)[0m
+  Rendered instances/create.html.erb within layouts/application (0.2ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 299ms (Views: 272.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:02:54 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:13:56 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (22.7ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 319ms (Views: 292.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:13:56 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:13:56 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:56 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:56 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:13:56 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:13:56 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:56 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 18:13:57 -0700
+
+SyntaxError (/Users/anthonyalden/Documents/syrup_app_new/app/controllers/instances_controller.rb:11: syntax error, unexpected ')', expecting ']'):
+  app/controllers/instances_controller.rb:11: syntax error, unexpected ')', expecting ']'
+
+
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.3ms)
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 18:14:31 -0700
+
+SyntaxError (/Users/anthonyalden/Documents/syrup_app_new/app/controllers/instances_controller.rb:11: syntax error, unexpected ')', expecting ']'):
+  app/controllers/instances_controller.rb:11: syntax error, unexpected ')', expecting ']'
+
+
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (1.4ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (1.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (23.1ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 321ms (Views: 286.0ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:54 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:55 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:55 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:55 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:55 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:55 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:55 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:15:55 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:15:55 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 18:15:56 -0700
+
+SyntaxError (/Users/anthonyalden/Documents/syrup_app_new/app/controllers/instances_controller.rb:11: syntax error, unexpected ')', expecting ']'):
+  app/controllers/instances_controller.rb:11: syntax error, unexpected ')', expecting ']'
+
+
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.4ms)
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:23:47 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1  [["id", 40]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1[0m  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (22.5ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 299ms (Views: 271.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:48 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[35mIngredientProduct Load (0.4ms)[0m  SELECT "ingredients_products".* FROM "ingredients_products"  WHERE "ingredients_products"."product_id" = 40 AND "ingredients_products"."ingredient_id" = 2
+  Rendered instances/create.html.erb within layouts/application (0.2ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 259ms (Views: 226.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:23:50 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:30:11 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (17.9ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 260ms (Views: 234.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:12 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 18:30:15 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[36mIngredientProduct Load (0.4ms)[0m  [1mSELECT  "ingredients_products".* FROM "ingredients_products"  WHERE "ingredients_products"."product_id" = 40 AND "ingredients_products"."ingredient_id" = 2 LIMIT 1[0m
+  Rendered instances/create.html.erb within layouts/application (0.2ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "instances" ("created_at", "instance_date", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2015-06-11 01:30:16.103080"], ["instance_date", "2015-06-11 01:30:15.879355"], ["updated_at", "2015-06-11 01:30:16.103080"]]
+  [1m[35m (175.1ms)[0m  COMMIT
+Redirected to 
+Completed 500 Internal Server Error in 412ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/instances_controller.rb:10:in `create'
+
+
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/anthonyalden/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.1.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (22.9ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 306ms (Views: 278.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:53 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:54 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:54 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[36mIngredientProduct Load (0.5ms)[0m  [1mSELECT  "ingredients_products".* FROM "ingredients_products"  WHERE "ingredients_products"."product_id" = 40 AND "ingredients_products"."ingredient_id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "instances" ("created_at", "instance_date", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2015-06-11 01:30:56.402351"], ["instance_date", "2015-06-11 01:30:56.376772"], ["updated_at", "2015-06-11 01:30:56.402351"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/40
+Completed 302 Found in 40ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mIngredient Load (0.7ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (12.6ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 286ms (Views: 281.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:56 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:57 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:57 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:57 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:57 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:30:57 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.9ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (19.8ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 308ms (Views: 279.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:43 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 18:32:46 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[36mIngredientProduct Load (0.3ms)[0m  [1mSELECT  "ingredients_products".* FROM "ingredients_products"  WHERE "ingredients_products"."product_id" = 40 AND "ingredients_products"."ingredient_id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "instances" ("created_at", "ingredients_products_id", "instance_date", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-11 01:32:46.991427"], ["ingredients_products_id", 85], ["instance_date", "2015-06-11 01:32:46.975442"], ["updated_at", "2015-06-11 01:32:46.991427"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/40
+Completed 302 Found in 29ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (10.1ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 249ms (Views: 245.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:32:47 -0700
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mIngredient Load (1.4ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (19.3ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 382ms (Views: 351.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:28 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:29 -0700
+
+
+Started POST "/instances/40?ingredient_id=2&product_id=40" for 127.0.0.1 at 2015-06-10 18:34:33 -0700
+Processing by InstancesController#create as HTML
+  Parameters: {"authenticity_token"=>"yqBQDhpUiNJH9eBSYnP+jlhNieJGh9A+AFLKPYWrqRA=", "ingredient_id"=>"2", "product_id"=>"40", "id"=>"40"}
+  [1m[36mIngredientProduct Load (0.3ms)[0m  [1mSELECT  "ingredients_products".* FROM "ingredients_products"  WHERE "ingredients_products"."product_id" = 40 AND "ingredients_products"."ingredient_id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "instances" ("created_at", "ingredients_products_id", "instance_date", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-06-11 01:34:33.825128"], ["ingredients_products_id", 85], ["instance_date", "2015-06-11 01:34:33.808634"], ["updated_at", "2015-06-11 01:34:33.825128"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/40
+Completed 302 Found in 30ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/products/40" for 127.0.0.1 at 2015-06-10 18:34:33 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_products" ON "ingredients"."id" = "ingredients_products"."ingredient_id" WHERE "ingredients_products"."product_id" = $1  [["product_id", 40]]
+  Rendered products/show.html.erb within layouts/application (11.3ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 297ms (Views: 293.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/instances.css?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/instances.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/sitewide/jquery_scripts.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-10 18:34:34 -0700
