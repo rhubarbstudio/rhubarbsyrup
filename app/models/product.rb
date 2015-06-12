@@ -4,7 +4,7 @@ class Product < ActiveRecord::Base
 	has_many :ingredients, :through => :instances do
 		def unique
 			# where("instances.instance_date = ?", nil)
-			where("instances.instance_date": nil)
+			where({"instances.instance_date" => nil})
 		end
 	end
 end
