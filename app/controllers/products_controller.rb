@@ -8,26 +8,8 @@ class ProductsController < ApplicationController
 	end
 
 	def show
-
 		@product = Product.find(params[:id])
-		@product_ingredients = IngredientProduct.where({product_id: @product.id })
-		@instance = Instance.where(ingredients_products_id: @product_ingredients[13].id).take
-		
-		# @ingredients.each do |ingredient|
-		# 	# @instance.push(ingredient)
-			
-		# 	# @ingredient_product = IngredientProduct.where({product_id: @product.id, ingredient_id: ingredient.id}).take.id
-			
-		# 	# @instance_dates = Instance.where({ingreddients_products_id: @ingredient_product })
-		# 	# @ingredient_products.each do |ingredient_product|
-		# 	# 	@instance_date.push(Instance.where(ingredients_products_id: ingredient_product.id)).last
-		# 	# end
-
-		# end
-		
-		# @instance = Instance.where({product_id: @product.id, ingredient_id: @ingredient.id}).take
-
-		# Ingredient.joins(:products).where("product.id = ?", params[:products])
+		@ingredients = @product.ingredients.unique
 	end
 
 
@@ -36,7 +18,7 @@ class ProductsController < ApplicationController
 	end
 
 	def create
-		@product =Product.new(product_params)
+		@product = Product.new(product_params)
 		@product.ingredients = Ingredient.all
 
 		@product.product_name = @product.product_name.downcase

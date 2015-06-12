@@ -1,5 +1,5 @@
 class Instance < ActiveRecord::Base
-	has_many :product_ingredients
-# 	has_many :ingredients, :through => :product_ingredients
-
+	belongs_to :product
+	belongs_to :ingredient
+	scope :unique, where(instance_date: '')
 end

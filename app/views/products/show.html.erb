@@ -5,13 +5,13 @@
 			<div class="col-sm-4">
 				<div class="page-title">product: <%= @product.product_name %></div>
 				<div class="page-subtitle">ingredients</div>
-					<% @product.ingredients.each do |ingredient| %>
+					<% @product.ingredients.unique.each do |ingredient| %>
 						<div class="ingredient-name">
 							<div class="btn btn-color btn-width btn-spacing">
 								<%= link_to ingredient.name, create_instance_path(ingredient_id: ingredient.id, product_id: @product.id), method: :create, class: "btn btn-color btn-width-show" %>
 							</div>
-							Date <%= ingredient.instances.last.instance_date %> 
 							
+							Last: <%= ingredient.instances.last.instance_date %>
 						</div>
 					<% end %>
 			</div>	
