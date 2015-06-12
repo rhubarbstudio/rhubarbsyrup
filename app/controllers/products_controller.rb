@@ -9,7 +9,6 @@ class ProductsController < ApplicationController
 
 	def show
 		@product = Product.find(params[:id])
-		@ingredients = @product.ingredients.unique
 	end
 
 
