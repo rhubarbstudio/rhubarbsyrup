@@ -18,7 +18,7 @@
 
 :hover.btn-color{
 
-	background-color: #B2B2B2;
+	background-color: black;
 	color: white;
 	text-decoration: none;
 
@@ -31,14 +31,20 @@
 
 
 .navbar {
-	background-color: lightgray;
+	background-color: #E52E62;
+
+	
 
 
 }
 
 .button-color{
-	background-color: #999999;
+	background-color: #009CB1;
 	color: white;
+}
+
+body {
+	font-size: 5em;
 }
 
 
