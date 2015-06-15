@@ -1,0 +1,9 @@
+<div>
+
+	
+	<% @product.ingredients.unique.each do |ingredient| %>
+		<span class="text-float-left ingredient-width"><%= ingredient.name %></span>
+		<%= Product.convert_date(ingredient.instances.last.instance_date.to_s) %>
+		
+	<% end %>
+</div>

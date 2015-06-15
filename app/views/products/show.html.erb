@@ -10,8 +10,10 @@
 							<div class="btn btn-color-ingredients btn-width btn-spacing">
 								
 								<span class="text-float-left ingredient-width"><%= ingredient.name %></span>
-								<%= link_to image_tag("add-instance.svg", width: 25, height: 25), create_instance_path(ingredient_id: ingredient.id, product_id: @product.id), method: :create, class: "btn btn-color-instance btn-instance-width btn-float-right btn-instance-height" %>
-								<span class= "btn-float-right"><%= Product.convert_date(ingredient.instances.last.instance_date.to_s)%></span>
+								<%= link_to image_tag("add-instance.svg", width: 25, height: 25), create_instance_path(ingredient_id: ingredient.id, product_id: @product.id), method: :create, class: "btn-color-instance btn-instance-width btn-float-right btn-instance-height" %>
+
+								<%= link_to "history", instances_path(@product) %>
+								<span class= "btn-float-right moment"><%= Product.convert_date(ingredient.instances.last.instance_date.to_s)%></span>
 								
 
 								<!-- <div data-stringl=ingredient.instances.last.instance_date.to_s class="moment"></div> -->
@@ -30,12 +32,14 @@
 </div>
 <script type="text/javascript">
 
-// $(document).ready(function(){
-// 	alert(instanceDate);
-// 	// var string1 = $('.moment').data('stringl');
-// 	// var fromnow = moment(ingredient.instances.last.instance_date.to_s);
-// 	// $('.moment').text(string1);
-// });
+$(document).ready(function(){
+	$('.moment').each(function(){
+		var str = $(this).text();
+		if (str.length> 0) {
+			$(this).text(moment(str).fromNow());
+		}
+	});
+});
 
    
 </script>
