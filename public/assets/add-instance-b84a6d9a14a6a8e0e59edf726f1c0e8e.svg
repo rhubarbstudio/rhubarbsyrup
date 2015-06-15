@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
+    <title>Add</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Design-&amp;-Development" sketch:type="MSArtboardGroup" transform="translate(-80.000000, -81.000000)">
+            <g id="Add" sketch:type="MSLayerGroup" transform="translate(81.000000, 82.000000)">
+                <path d="M9.956,-0.0490030518 L27.956,-0.0490030518 C33.479,-0.0490030518 37.956,4.42799695 37.956,9.95099695 L37.956,27.9509969 C37.956,33.4739969 33.479,37.9509969 27.956,37.9509969 L9.956,37.9509969 C4.434,37.9509969 -0.044,33.4739969 -0.044,27.9509969 L-0.044,9.95099695 C-0.044,4.42799695 4.434,-0.0490030518 9.956,-0.0490030518" id="Fill-222" fill="#58A0DF" sketch:type="MSShapeGroup"></path>
+                <path d="M27.956,20.9509969 L20.956,20.9509969 L20.956,27.9509969 C20.956,28.5029969 20.509,28.9509969 19.956,28.9509969 L17.956,28.9509969 C17.404,28.9509969 16.956,28.5029969 16.956,27.9509969 L16.956,20.9509969 L9.956,20.9509969 C9.404,20.9509969 8.956,20.5029969 8.956,19.9509969 L8.956,17.9509969 C8.956,17.3989969 9.404,16.9509969 9.956,16.9509969 L16.956,16.9509969 L16.956,9.95099695 C16.956,9.39899695 17.404,8.95099695 17.956,8.95099695 L19.956,8.95099695 C20.509,8.95099695 20.956,9.39899695 20.956,9.95099695 L20.956,16.9509969 L27.956,16.9509969 C28.509,16.9509969 28.956,17.3989969 28.956,17.9509969 L28.956,19.9509969 C28.956,20.5029969 28.509,20.9509969 27.956,20.9509969" id="Fill-223" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

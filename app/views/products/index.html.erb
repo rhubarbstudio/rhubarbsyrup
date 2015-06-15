@@ -2,16 +2,16 @@
 
 <div class="container">
 	<div class="row"></div>
-		<div class="col-lg-4  col-sm-12"></div>
+		<div class="col-lg-4 col-sm-12"></div>
 			<div class="col-lg-4  col-sm-12">
 
 				<div class="page-title">products</div>
 				<div class="items  btn btn-color btn-width btn-center">
-					<button class="flip-add-product btn-color btn-cneter btn-height">add new product</button>
+					<button class="flip-add-product btn-color btn-cneter"><%= image_tag 'new-product.svg', class: "new-image" %></button>
 				
 					<div class="panel-add-product">
 						<%= form_for  Product.new  do  |f| %>
-				              <%= f.text_field :product_name, maxlength: "30", :required => true %>
+				              <%= f.text_field :product_name, maxlength: "15", :required => true %>
 				              <%= f.submit "create", class: "btn-color" %>
 				              <%= link_to 'cancel', products_path, class: 'btn btn-danger btn-xs' %>
 				  		<% end %>
@@ -29,9 +29,10 @@
 						<%= link_to   product.product_name, product_path(product.id), class: "btn btn-color" %>
 
 						
-						<button class="flip btn-float-right btn-color">edit</button>
-						<%= link_to "delete", delete_product_path(product.id), method: :delete, data: { confirm: 'Are you sure you want to delete product: '+product.product_name.upcase+  '?  ALL HISTORY WILL ALSO BE PERMANENTLY DELETED!' }, class: "btn btn-sm btn-default button-color btn-float-right" %></button>
 						
+						<%= link_to image_tag("delete-product.svg", width: 25, height: 25), delete_product_path(product.id), method: :delete, data: { confirm: 'Are you sure you want to delete product: '+product.product_name.upcase+  '?  ALL HISTORY WILL ALSO BE PERMANENTLY DELETED!' }, class: "btn btn-sm button-color btn-float-right delete-product-button" %>
+
+						<button class="flip btn btn-sm btn-float-right btn-color"><%= image_tag 'edit-product.svg', class: "edit-image" %></button>
 						
 						<div class="panel1">
 							<%= form_for product do |f| %>

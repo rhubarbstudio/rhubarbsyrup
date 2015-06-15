@@ -1,21 +1,41 @@
 
 <div class="container">
 	<div class="row"></div>
-		<div class="col=lg=6 col-md-12 col-sm-12"></div>
-			<div class="col-lg-6 col-md-12 col-sm-12">
-				<div class="page-title">product: <%= @product.product_name %></div>
+		<div class="col=lg=12 col-md-12 col-sm-12"></div>
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="page-title"><%= @product.product_name %></div>
 				<div class="page-subtitle">ingredients</div>
 					<% @product.ingredients.unique.each do |ingredient| %>
 						<div class="ingredient-name">
 							<div class="btn btn-color-ingredients btn-width btn-spacing">
-								<%= link_to ingredient.name, create_instance_path(ingredient_id: ingredient.id, product_id: @product.id), method: :create, class: "btn btn-color-ingredients btn-width-show" %>
+								
+								<span class="text-float-left ingredient-width"><%= ingredient.name %></span>
+								<%= link_to image_tag("add-instance.svg", width: 25, height: 25), create_instance_path(ingredient_id: ingredient.id, product_id: @product.id), method: :create, class: "btn btn-color-instance btn-instance-width btn-float-right btn-instance-height" %>
+								<span class= "btn-float-right"><%= Product.convert_date(ingredient.instances.last.instance_date.to_s)%></span>
+								
+
+								<!-- <div data-stringl=ingredient.instances.last.instance_date.to_s class="moment"></div> -->
+								
 							</div>
 							
-							Last: <%= ingredient.instances.last.instance_date %>
 						</div>
 					<% end %>
+					<!-- <%= javascript_tag do %>
+							window.instanceDate = '<%= @product.ingredients[2].name + @product.ingredients[2].instances[3].instance_date.to_s%>';
+					 <% end %> -->
 			</div>	
 			
 		
 	</div>
 </div>
+<script type="text/javascript">
+
+// $(document).ready(function(){
+// 	alert(instanceDate);
+// 	// var string1 = $('.moment').data('stringl');
+// 	// var fromnow = moment(ingredient.instances.last.instance_date.to_s);
+// 	// $('.moment').text(string1);
+// });
+
+   
+</script>

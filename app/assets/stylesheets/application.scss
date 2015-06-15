@@ -18,7 +18,7 @@
 
 :hover.btn-color{
 
-	background-color: black;
+	background-color: teal;
 	color: white;
 	text-decoration: none;
 
@@ -29,6 +29,9 @@
 	border: none;
 }
 
+:hover.btn.btn-color-ingredients {
+	color: white;
+}
 
 .navbar {
 	background-color: #E52E62;

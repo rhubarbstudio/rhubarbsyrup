@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="86px" height="86px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>noun_53504</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="noun_53504" sketch:type="MSLayerGroup" fill="#FFFFFF">
+            <g id="Group" sketch:type="MSShapeGroup">
+                <path d="M43,4.229 C64.378,4.229 81.771,21.622 81.771,43 C81.771,64.378 64.378,81.771 43,81.771 C21.622,81.771 4.229,64.378 4.229,43 C4.229,21.622 21.622,4.229 43,4.229 L43,4.229 Z M43,0.229 C19.378,0.229 0.229,19.378 0.229,43 C0.229,66.622 19.378,85.771 43,85.771 C66.622,85.771 85.771,66.622 85.771,43 C85.771,19.378 66.622,0.229 43,0.229 L43,0.229 L43,0.229 Z" id="Shape"></path>
+                <rect id="Rectangle-path" transform="translate(42.999931, 42.804769) rotate(45.000000) translate(-42.999931, -42.804769) " x="40.9999501" y="14.6325392" width="3.99996164" height="56.3444596"></rect>
+                <rect id="Rectangle-path" transform="translate(42.999624, 42.804769) rotate(45.000000) translate(-42.999624, -42.804769) " x="14.827394" y="40.8047882" width="56.3444596" height="3.99996164"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
