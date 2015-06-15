@@ -13,7 +13,7 @@
 								<%= link_to image_tag("add-instance.svg", width: 25, height: 25), create_instance_path(ingredient_id: ingredient.id, product_id: @product.id), method: :create, class: "btn-color-instance btn-instance-width btn-float-right btn-instance-height" %>
 
 								<%= link_to "history", instances_path(@product) %>
-								<span class= "btn-float-right moment"><%= Product.convert_date(ingredient.instances.last.instance_date.to_s)%></span>
+								<span class= "btn-float-right moment"><%= ingredient.instances.last.instance_date %></span>
 								
 
 								<!-- <div data-stringl=ingredient.instances.last.instance_date.to_s class="moment"></div> -->
@@ -22,9 +22,6 @@
 							
 						</div>
 					<% end %>
-					<!-- <%= javascript_tag do %>
-							window.instanceDate = '<%= @product.ingredients[2].name + @product.ingredients[2].instances[3].instance_date.to_s%>';
-					 <% end %> -->
 			</div>	
 			
 		

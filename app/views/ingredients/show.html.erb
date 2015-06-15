@@ -1,0 +1,7 @@
+test
+<%= @ingredient.to_yaml %>
+
+INSTANCES:
+<% @instances.each do |instance| %>
+	date: <%= instance.instance_date %>
+<% end %>

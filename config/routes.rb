@@ -14,12 +14,18 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   root 'products#index'
-  resources :products, only: [:index, :new, :create, :edit, :update, :show]
+  # resources :products
+  
+  resources :products, only: [:index, :new, :create, :edit, :update, :show] do
+    resources :ingredients
+  end
   
   delete 'products/:id', to: 'products#destroy', as: :delete_product 
 
   resources :instances, only: [:index, :new, :edit, :show, :update]
   post 'instances/:id', to: 'instances#create', as: :create_instance
+
+
   # Example resource route with options:
   #   resources :products do
   #     member do
