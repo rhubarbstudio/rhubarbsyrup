@@ -12,9 +12,8 @@
 								<span class="text-float-left ingredient-width"><%= ingredient.name %></span>
 								<%= link_to image_tag("add-instance.svg", width: 25, height: 25), create_instance_path(ingredient_id: ingredient.id, product_id: @product.id), method: :create, class: "btn-color-instance btn-instance-width btn-float-right btn-instance-height" %>
 
-								<%= link_to "history", instances_path(@product) %>
-								<span class= "btn-float-right moment"><%= ingredient.instances.last.instance_date %></span>
-								
+								<%= link_to "history", product_ingredient_path(id: ingredient.id, product_id: @product.id) %>
+								<span class= "btn-float-right moment"><%= ingredient.instances.perProduct(@product.id).last.instance_date %></span>
 
 								<!-- <div data-stringl=ingredient.instances.last.instance_date.to_s class="moment"></div> -->
 								

@@ -1,7 +1,99 @@
-test
-<%= @ingredient.to_yaml %>
 
-INSTANCES:
-<% @instances.each do |instance| %>
-	date: <%= instance.instance_date %>
-<% end %>
+<div class="page-title"> 
+	ingredient: <%= @ingredient.name.downcase %>
+</div>
+
+<div>
+
+	<span class="float-left attributes-left-margin attribute-font-size">
+		step: <%= @ingredient.step.downcase %>
+	</span>
+	<button class="btn btn-color show-hide-method-description float-right view-more-btn-margin">view more</button>
+	<span class="float-right attributes-right-margin attribute-font-size">
+		track: <%= @ingredient.track.downcase %>
+	</span>
+
+</div>
+
+
+<br>
+
+<div id="panel-show-hide-method-description">
+
+	<div class="float-left attribute-font-size"> 
+		method: 
+		<%= @ingredient.method.downcase %>
+		
+	</div>
+
+
+
+	<div class="float-left attribute-font-size">
+	description: 
+		<%= @ingredient.description.downcase %>
+	</div>
+
+
+</div>
+
+	
+<br>
+<br>
+
+<div class="page-subtitle attributes-left-margin">
+	<%= @instances.count %> instances
+</div>
+
+
+<div>
+	
+	<% @instances.each do |instance| %>
+		
+		
+		<div>
+			<span class=" attribute-font-size moment" >
+				date: <%= instance.instance_date %>
+			</span>
+			<button class="btn btn-default btn-color show-hide-note-button">add note</button>
+			<%= form_for instance do |f| %>
+			      <%= f.text_area :note, size: "20x2", class: "instance-note-text-area"%>
+			      <%= f.submit "save", class: "btn-instance-save" %>
+			 <% end %>
+		 </div>	
+	<% end %>
+</div>
+
+
+		
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$('.moment').each(function(){
+		var str = $(this).text();
+		if (str.length> 0) {
+			$(this).text(moment(str).fromNow());
+		}
+	});
+});
+
+
+// show or hide the method and description
+$(document).ready(function(){
+    $(".show-hide-method-description").click(function(){
+        $("#panel-show-hide-method-description").toggle();
+});
+
+    });
+
+// show or hide the notes data entry box
+$(document).ready(function(){
+    $(".show-hide-note-button").click(function(event){
+    	var button = $(event.currentTarget);
+    	var form = button.siblings('form');
+    	form.find(".instance-note-text-area").toggle();
+	});
+
+});
+
+   
+</script>

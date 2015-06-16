@@ -1,6 +1,37 @@
 /*// Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+.instance-note-text-area{
+	
+	display: inline-block;
+	margin-left: 100px;
+	width: 30%;
+	height: 60px;
+	font-size: .3em;
+	display: none;
+
+}
+
+.btn-instance-save {
+	width: 70px;
+	height: 40px;
+	font-size: .4em;
+	display: none;
+}
+
+.view-more-btn-margin {
+	margin-top: 10px;
+	margin-right: 30px;
+}
+
+#hide-method-description {
+	display: none;
+}
+#panel-show-hide-method-description {
+	display: none;	
+}
+
 .edit-image{
 	height: 25px;
 	width: 25px;
@@ -110,7 +141,7 @@
 	font-size: .80em;
 	font-weight: bold;
 	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 }
 
 .items {
@@ -171,6 +202,23 @@
 
 .text-float-left {
 	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.attributes-left-margin {
+	margin-left: 3%;
+}
+
+
+.attributes-right-margin{
+	margin-right: 3%;
 }
 
 .ingredient-width {

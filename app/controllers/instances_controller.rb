@@ -1,5 +1,9 @@
 class InstancesController < ApplicationController
 
+	def index
+		@instances = Instance.all
+	end
+
 	def create
 		@instance = Instance.new
 		@instance.instance_date = Time.now
@@ -11,6 +15,18 @@ class InstancesController < ApplicationController
 			redirect_to product_path
 		else render "create"
 		end
+	end
+
+	def update
+		@instance = Instance.find(params[:id])
+		if @instance.update_attributes(instance_params)
+			# return to the sellers item index page after update to user info
+			# redirect_to request.referer
+			redirect_to product_ingredient_path(product_id: @instance.product_id, id: @instance.ingredient_id)
+		else
+			redirect_to product_ingredient_path
+		end
+
 	end
 
 
